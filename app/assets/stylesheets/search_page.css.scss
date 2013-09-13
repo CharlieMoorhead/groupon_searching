@@ -1,0 +1,21 @@
+// Place all the styles related to the search_page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#searchBox {
+	width: 500px;
+}
+
+#everything {
+	width: 800px;
+	height: 140px;
+	
+	Text-align: center;
+
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}

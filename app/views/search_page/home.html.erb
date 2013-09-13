@@ -1,0 +1,17 @@
+<div id="everything">
+
+	<h1>Search Groupon</h1>
+
+	<span><input id="searchBox" /></span>
+
+	<span>
+		<select id="division_select">
+			<% @divisions.each do |division| %>
+				<option value ="<%= division["id"] %>"><%= division["name"] %></option>
+			<% end %>
+		</select>
+	</span>
+
+	<span><button id="searchButton">Search</button></span>
+
+</div>

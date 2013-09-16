@@ -8,9 +8,14 @@ $(document).ready(function() {
 		setAutocompleteValues($("#division_select").val(), client_id, deals);
 	});
 
-	$("#searchButton").click(function(){
-		var url = "http://www.groupon.com/browse/" + $("#division_select").val() + "?query=" + $("#searchBox").val();
-		window.open(url);
+	$("#searchButton").click(searchGroupon);
+
+	$('#searchBox').bind("enterKey",searchGroupon);
+	$('#searchBox').keypress(function(e){
+		if(e.keyCode == 13)
+		{
+			$(this).trigger("enterKey");
+		}
 	});
 })
 
@@ -32,4 +37,10 @@ function setAutocompleteValues (division, client_id, deals) {
 			}));
 		}
 	});
+}
+
+function searchGroupon()
+{
+	var url = "http://www.groupon.com/browse/" + $("#division_select").val() + "?query=" + $("#searchBox").val();
+	window.open(url);
 }
